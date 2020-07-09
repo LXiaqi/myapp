@@ -33,5 +33,23 @@ final List<Post> posts = [
     author: '佚名',
     imageUrl:
         'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594299121166&di=0a549e8dd72035870a16af36adb18e68&imgtype=0&src=http%3A%2F%2Fpic.feizl.com%2Fupload%2Fallimg%2F170614%2F1923054Y4-0.jpg',
-  )
+  ),
+  Post(
+    title: '日韩风情',
+    author: '佚名',
+    imageUrl:
+        'https://img.tupianzj.com/uploads/allimg/200423/30-200423113T7.jpg',
+  ),
+  Post(
+    title: '中式古典',
+    author: '佚名',
+    imageUrl:
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594304661927&di=e578964f7eff294088622f795becd29d&imgtype=0&src=http%3A%2F%2Fimg.ewebweb.com%2Fuploads%2F20190926%2F11%2F1569468220-XCDnNhOWoF.jpg',
+  ),
+  Post(
+    title: '欧美狂野',
+    author: '佚名',
+    imageUrl:
+        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594304767994&di=7e990d082176e2663199a5d580f6ee61&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fpic%2Fd%2Ff9%2Fdf131428286.jpg',
+  ),
 ];
