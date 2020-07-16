@@ -2,6 +2,88 @@ import 'package:flutter/material.dart';
 import '../model/post.dart';
 
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridViewBuilderDemo();
+  }
+}
+
+class GridViewBuilderDemo extends StatelessWidget {
+  Widget _gridItemBuilder(BuildContext context, int index) {
+    return Container(
+      child: Image.network(
+        posts[index].imageUrl,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      padding: EdgeInsets.all(8.0),
+      itemCount: posts.length,
+      itemBuilder: _gridItemBuilder,
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        // SliverGridDelegateWithFixedCrossAxisCount
+        // crossAxisCount: 2,
+        maxCrossAxisExtent: 250.0,
+        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 8.0,
+      ),
+    );
+  }
+}
+
+class GridViewExtentDemo extends StatelessWidget {
+  List<Widget> _buildTiles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+        color: Colors.grey[300],
+        alignment: Alignment(0.0, 0.0),
+        child: Text('item $index',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey)),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.extent(
+      maxCrossAxisExtent: 150.0,
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      // scrollDirection: Axis.horizontal,
+      children: _buildTiles(100),
+    );
+  }
+}
+
+class GridViewCountDemo extends StatelessWidget {
+  List<Widget> _buildTiles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+        color: Colors.grey[300],
+        alignment: Alignment(0.0, 0.0),
+        child: Text('item $index',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey)),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.count(
+      crossAxisCount: 3,
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      // scrollDirection: Axis.horizontal,
+      children: _buildTiles(100),
+    );
+  }
+}
+
+class PageViewBildDemo extends StatelessWidget {
   Widget _pageItemBuilder(BuildContext context, int index) {
     return Stack(
       children: <Widget>[
