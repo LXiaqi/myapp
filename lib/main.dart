@@ -23,7 +23,7 @@ class App extends StatelessWidget {
       routes: {
         '/': (context) => Home(),
         '/about': (context) => P1age(title: 'Ablot'),
-        '/form': (context) => FoemDemo(),
+        '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
       },
       theme: ThemeData(
