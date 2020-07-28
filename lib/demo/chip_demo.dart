@@ -128,9 +128,9 @@ class _ChipDemoState extends State<ChipDemo> {
                 Wrap(
                   spacing: 8.0,
                   children: _tags.map((tag) {
-                    return FilterChip(
+                    return ChoiceChip(
                       label: Text(tag),
-                      selectedColor: Colors.amber,
+                      selectedColor: Colors.black,
                       selected: _choice == tag,
                       onSelected: (value) {
                         setState(() {
