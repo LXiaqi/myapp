@@ -5,8 +5,8 @@ import './popup_menu_button_demo.dart';
 import './form_demo.dart';
 import './checkbox_demo.dart';
 import './radio_demo.dart';
-import 'switch_demo.dart';
-import 'slider_demo.dart';
+import './switch_demo.dart';
+import './slider_demo.dart';
 import './datetime_demo.dart';
 import './simple_dialog_demo.dart';
 import './alert_dialog_demo.dart';
@@ -14,7 +14,8 @@ import './bottom_sheet_demo.dart';
 import './snack_bar_demo.dart';
 import './expansion_panel_demo.dart';
 import './chip_demo.dart';
-import 'data_table_demo.dart';
+import './data_table_demo.dart';
+import './paginated_data_table_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -26,6 +27,8 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+              title: 'PaginatedDataTableDemo', page: PaginatedDataTableDemo()),
           ListItem(title: 'DataTableDemo', page: DataTableDemo()),
           ListItem(title: 'ChipDemo', page: ChipDemo()),
           ListItem(title: 'ExpansionPanelDemo', page: ExpansionPanelDemo()),
