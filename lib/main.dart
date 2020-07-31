@@ -12,6 +12,7 @@ import './demo/form_demo.dart';
 import './demo/material_components.dart';
 import './demo/state/state_management_demo.dart';
 import './demo/stream/stream_demo.dart';
+import './demo/rxdart/rxdart_demo.dart';
 
 void main() => runApp(App());
 
@@ -21,7 +22,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       // debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/Stream',
+      initialRoute: '/RxDart',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => P1age(title: 'Ablot'),
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
         '/mdc': (context) => MaterialComponents(),
         '/state-management': (context) => StateManagementDemo(),
         '/Stream': (context) => StreamDemo(),
+        '/RxDart': (context) => RxDartDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.pink,
