@@ -13,6 +13,7 @@ import './demo/material_components.dart';
 import './demo/state/state_management_demo.dart';
 import './demo/stream/stream_demo.dart';
 import './demo/rxdart/rxdart_demo.dart';
+import './demo/bloc/bloc_demo.dart';
 
 void main() => runApp(App());
 
@@ -22,7 +23,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       // debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/RxDart',
+      initialRoute: '/BlocDemo',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => P1age(title: 'Ablot'),
@@ -31,6 +32,7 @@ class App extends StatelessWidget {
         '/state-management': (context) => StateManagementDemo(),
         '/Stream': (context) => StreamDemo(),
         '/RxDart': (context) => RxDartDemo(),
+        '/BlocDemo': (context) => BlocDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.pink,
